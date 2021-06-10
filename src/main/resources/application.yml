@@ -1,0 +1,27 @@
+# DataSource Config
+server:
+  port: 9090
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:./db/H2/testdb
+#    url: jdbc:h2:mem:testdb
+#    url: jdbc:h2:tcp://localhost:9092/mem:testdb
+    username: root
+    password: root
+  h2:
+    console:
+      enabled: true #开启web console功能
+      path: /h2
+      settings:
+        web-allow-others: true
+  main:
+    allow-bean-definition-overriding: true
+  activiti:
+    database-schema-update: true
+    check-process-definitions: true
+    process-definition-location-prefix: classpath:/processes/
+    #    process-definition-location-suffixes:
+    #      - **.bpmn
+    #      - **.bpmn20.xml
+    history-level: full

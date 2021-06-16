@@ -13,6 +13,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import javax.sql.DataSource;
 import java.io.IOException;
 //https://www.yht7.com/news/130098
+//https://blog.csdn.net/qq_37143673/article/details/102667824
 @Configuration
 public class ActivitiConfig {
     private final DataSource dataSource;
